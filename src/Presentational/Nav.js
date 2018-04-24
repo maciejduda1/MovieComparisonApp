@@ -8,7 +8,7 @@ const Nav = (props) => {
     if (props.gotResults) {
         return (
             <div className="search-bar">
-                <img src="http://via.placeholder.com/50x50" />
+                <img src="http://via.placeholder.com/50x50" alt=""/>
                 <Search />
                 <Link to='/results'>All Results</Link>
                 <div className="compare-bar">
@@ -24,7 +24,7 @@ const Nav = (props) => {
     }
     return (
         <div className="search-bar">
-            <img src="http://via.placeholder.com/50x50" />
+            <img src="http://via.placeholder.com/50x50" alt="" />
             <Search />
             <Link to='/results' onClick={(e)=> e.preventDefault() }>All Results</Link>
             <div className="compare-bar">

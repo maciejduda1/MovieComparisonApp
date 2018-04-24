@@ -15,15 +15,19 @@ const initialState = {
 function appReducer (state = initialState, action) {
     switch (action.type) {
         case ADD_MOVIE_LEFT: 
-            console.log('addMovieLeft data ', action.movie );
-            return Object.assign({}, state, { movieLeft: action.movie });
-
+            if (action.movie.backdrop_path !== state.movieRight.backdrop_path){
+                return Object.assign({}, state, { movieLeft: action.movie });
+            }
+            return Object.assign({}, state, {});
         case ADD_MOVIE_RIGHT:
-            console.log('addMovieRight data ', action.movie );
-            return Object.assign({}, state, { movieRight: action.movie });
-    
+        //    console.log('porównanie: ', state.movieLeft, 'P: ', state.movieRight,' ad: ', action.movie);
+            if (action.movie.backdrop_path !== state.movieLeft.backdrop_path) {
+                return Object.assign({}, state, { movieRight: action.movie });
+            }
+            return Object.assign({}, state, {});
         case GET_RESPONSE_FAILED:
-            console.log('error', action.error);
+            console.log('error!!!', action.error, state.gotResults);
+            return Object.assign({}, state, {loading: false, gotResults: false});
 
         case GET_RESPONSE_DONE:
             console.log('resultPages: ', action.data.total_pages );

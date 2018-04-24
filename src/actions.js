@@ -70,21 +70,29 @@ function searchDetailsRight(movie) {
 
 function searchDatabase(event, page) {
     return dispatch => {
-            dispatch(searchDatabaseRequested());
-            console.log('czego szukam',event);
-            const movieTitle = event;
-            const resultsPage = page || 1;
-            console.log('resultsPage', resultsPage);
-            const api_key = 'e7cbc37b2431954da6cfc6053cd4e9f8';
-            const URL = 'https://api.themoviedb.org/3/search/movie?include_adult=false&api_key=' + api_key + '&query=' + movieTitle + '&page=' + resultsPage;
-            fetch(URL).then( (res) => res.json())
+        dispatch(searchDatabaseRequested());
+        console.log('czego szukam',event);
+        const movieTitle = event;
+        const resultsPage = page || 1;
+        console.log('resultsPage', resultsPage);
+        const api_key = 'e7cbc37b2431954da6cfc6053cd4e9f8';
+        const URL = 'https://api.themoviedb.org/3/search/movie?include_adult=false&api_key=' + api_key + '&query=' + movieTitle + '&page=' + resultsPage;
+        fetch(URL)
+            .then( (res) => {
+                if (res.status) {
+                  return res.json();
+                } 
+                dispatch(getResponseFailed(Error));
+                throw new Error('błąd w połączeniu');
+
+            })
                 .then( (data) => {
                     dispatch(getResponseDone(data, movieTitle));
-                })
-            /*    .catch(error => {
-                    dispatch(getResponseFailed(error));
-                }) */
-          
+                })  
+                .catch( error => {
+                        dispatch(getResponseFailed(error));
+                    })    
+                  
     }
 }
 

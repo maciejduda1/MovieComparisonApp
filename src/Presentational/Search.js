@@ -6,7 +6,7 @@ const Search = (props) => (
         <input 
             type='text'
             onKeyUp = {(event) => {
-                console.log('3 dane: ', event.keyCode, event.target.value.length, props.searchDatabase );
+                //console.log('3 dane: ', event.keyCode, event.target.value.length, props.searchDatabase );
                 if (event.keyCode === 13 && event.target.value.length > 4) {
                     return props.searchDatabase(event.target.value);
                 } 
