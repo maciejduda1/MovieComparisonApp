@@ -5,7 +5,7 @@
 
 .movie-to-compare, .movie-compare-section {
     max-width: 100%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 

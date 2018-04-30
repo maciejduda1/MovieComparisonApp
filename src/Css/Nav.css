@@ -1,25 +1,24 @@
 .search-bar {
     display: flex;
-    max-width: 100vw;
-    max-height: 25vh;
+    width: 100vw;
+    height: 25vh;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
     margin-top: 5px;
 }
 
 .moviedb-image {
-    margin-right: auto;
+    align-self: center;
     max-width: 30vw;
-    object-fit: contain;
 }
 .moviedb-image > img {
     max-width: 100%;
-    height: auto;
+    max-height: 25vh;
 }
 .compare-bar {
     display: flex;
-    width: 70vw;
+    max-width: 75vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -41,23 +40,16 @@
 }
 
 
-.link-buttons {
-    width: 100vw;
+.link-buttons { 
     display: flex;
+    width: 100%;
     justify-content: center;
 }
 .link-buttons a {
-    padding: 0 15vw; 
-}
-/*
-.search-box {
-    
+    padding: 0 15px; 
 }
 
-input {
-   
-}
-*/
+
 .movie-small {
     display: flex;
     flex-direction: column;
@@ -70,13 +62,22 @@ input {
 }
 
 .movie-small img {
-    object-fit: contain;
-    max-width: 90%;
+    max-height: 10vh;
 }
 
 .movie-small h2 {
     display: none;
     color: white;
     margin: 0;
-    font-size: 0.3rem;
+    font-size: 1vh;
+}
+
+@media (max-height: 560px) {
+    .search-bar {
+        align-content: space-around;
+        flex-wrap: nowrap;
+    }
+    .compare-bar {
+        flex-direction: row;
+    }
 }

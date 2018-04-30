@@ -11,36 +11,35 @@
 }
 
 .movies {
-    max-height: 100%;
     width: 100vw;
+    height: 65vh;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
 .single-movie {
-    height: 65vh;
+    max-height: 100%;
     display: inline-flex;
     flex-direction: column;
     max-width: 85vw;
     padding-right: 10px;
-    object-fit: scale-down;
+   
 }
 
 .poster-container img {
     max-width: 90vw;
-    max-height: 55vh;
-    height: auto;
+    max-height: 50vh;   
+  
 }
 
 .movie-title {
     font-size: 0.75em;
 }
 
-.buttons {
-    height: 5vh;
-}
 
-.link-results {
-    
+@media (max-height: 560px) {
+    .poster-container img {
+        max-height: 45vh;
+    }
 }
