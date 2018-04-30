@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Css/Compare.css';
 
 const Compare = (props) => {
     let backgroundMovieImageRight = 'https://image.tmdb.org/t/p/original' + props.movieRight.backdrop_path,
@@ -9,12 +10,12 @@ const Compare = (props) => {
     const backgroundStyleRight = {
         backgroundImage: 'url('+ backgroundMovieImageRight +')',
     }
-    console.log('props backgrounds ', backgroundMovieImageRight, backgroundMovieImageLeft );
+   // console.log('props backgrounds ', backgroundMovieImageRight, backgroundMovieImageLeft );
     if (props.movieLeft.title == undefined  && props.movieRight.title !== undefined ) {
         return (
-            <div className='Compare'>
-                <div className='movie-right' style={backgroundStyleRight}>
-                    <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieRight.poster_path}`} alt='http://via.placeholder.com/50x50'></img>
+            <div className='compare'>
+                <div className='movie-to-compare' style={backgroundStyleRight}>
+                    <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieRight.poster_path}`} alt='movie poster'></img>
                     <h1>{props.movieRight.title}</h1>
                     <i>"{props.movieRight.tagline}"</i>
                     <h2>Release date:{props.movieRight.release_date}</h2>
@@ -28,9 +29,9 @@ const Compare = (props) => {
         );
     } else if (props.movieRight.title == undefined && props.movieLeft.title !== undefined) {
         return (
-            <div className='Compare'>
-                 <div className='movie-left'  style={backgroundStyleLeft}>
-                    <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieLeft.poster_path}`} alt='http://via.placeholder.com/50x50'></img>
+            <div className='compare'>
+                 <div className='movie-to-compare'  style={backgroundStyleLeft}>
+                    <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieLeft.poster_path}`} alt='movie poster'></img>
                     <h1>"{props.movieLeft.title}"</h1>
                     <i>{props.movieRight.tagline}</i>
                     <h2>Release date:{props.movieLeft.release_date}</h2>
@@ -44,15 +45,15 @@ const Compare = (props) => {
         );
     } else if (props.movieLeft.title == undefined  && props.movieRight.title == undefined){
         return (
-            <div className='Compare'>
+            <div className='compare'>
                 <h1>Find some movies to compare first!</h1>
             </div>
         );
     } 
     return (
-        <div className='Compare'>
-            <div className='movie-left'  style={backgroundStyleLeft}>
-                <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieLeft.poster_path}`} alt='http://via.placeholder.com/50x50'></img>
+        <div className='compare'>
+            <div className='movie-to-compare'  style={backgroundStyleLeft}>
+                <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieLeft.poster_path}`} alt='movie poster'></img>
                 <h1>"{props.movieLeft.title}"</h1>
                 <i>{props.movieRight.tagline}</i>
                 <h2>Release date:{props.movieLeft.release_date}</h2>
@@ -72,8 +73,8 @@ const Compare = (props) => {
                 <p>Higher Average Score:</p>
                 <p>{props.movieCompare[3].winner} scored higher by {props.movieCompare[3].value} point/points</p>    
             </div>
-            <div className='movie-right'  style={backgroundStyleRight}>
-                <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieRight.poster_path}`} alt='http://via.placeholder.com/50x50'></img>
+            <div className='movie-to-compare'  style={backgroundStyleRight}>
+                <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieRight.poster_path}`} alt='movie poster'></img>
                 <h1>{props.movieRight.title}</h1>
                 <i>"{props.movieRight.tagline}"</i>
                 <h2>Release date:{props.movieRight.release_date}</h2>

@@ -1,0 +1,46 @@
+.main-page {
+    color: rgb(94, 129, 40);
+    height: 65vh;
+}
+
+.loading-results {
+    background-color: black;
+    color: #01d277;
+    display: block;
+    max-height: 65vh;
+}
+
+.movies {
+    max-height: 100%;
+    width: 100vw;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.single-movie {
+    height: 65vh;
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 85vw;
+    padding-right: 10px;
+    object-fit: scale-down;
+}
+
+.poster-container img {
+    max-width: 90vw;
+    max-height: 55vh;
+    height: auto;
+}
+
+.movie-title {
+    font-size: 0.75em;
+}
+
+.buttons {
+    height: 5vh;
+}
+
+.link-results {
+    
+}

@@ -3,7 +3,7 @@ import MovieLeft from '../Presentational/MovieLeft';
 import { searchDatabase, addMovieLeft } from '../actions.js';
 
 const mapStateToProps = (state) => ({
-    movie: state.movieLeft
+    movie: state.movieRight
 });
 
 export default connect(mapStateToProps)(MovieLeft);

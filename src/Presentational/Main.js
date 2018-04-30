@@ -1,22 +1,21 @@
 import React from 'react';
 import Movie from '../Containers/MovieContainer';
-import { Link } from 'react-router-dom';
+import '../Css/Main.css';
+import noResultLogo from '../images/board-cinema-cinematography-274937.jpg';
 
 const Main = (props) => {
-    if (!props.loading && !props.gotResults) {
+    if (!props.loading && !props.gotResults && props.resultPages > 0) {
         return (
-            <div>
-                <img className='loading-results' src='../../public/board-cinema-cinematography-274937.jpg' alt=""/>
+            <div className="loading-results">
+                <img  src={noResultLogo} alt=""/>
             </div>
         );
     }
 
     if (!props.loading && props.gotResults) {
-     //   console.log('działam tu!');
         return (
-            <div>
+            <div className="loading-results">
                 <Movie/>
-                <Link to='/results'>More results...</Link>
             </div>
         );
     }    
@@ -27,7 +26,7 @@ const Main = (props) => {
     }
     
     return (
-        <div className='main-page'>
+        <div className="main-page">
             <h1>Welcome inside movie compare app!</h1>
             <p>compare your favorite movies</p>
         </div>

@@ -1,0 +1,14 @@
+.compare {
+    width: 100vw;
+    color: greenyellow;
+}
+
+.movie-to-compare, .movie-compare-section {
+    max-width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.movie-to-compare img {
+    max-width: 100%;
+}

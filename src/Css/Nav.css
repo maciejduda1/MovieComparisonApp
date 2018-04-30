@@ -1,0 +1,82 @@
+.search-bar {
+    display: flex;
+    max-width: 100vw;
+    max-height: 25vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.moviedb-image {
+    margin-right: auto;
+    max-width: 30vw;
+    object-fit: contain;
+}
+.moviedb-image > img {
+    max-width: 100%;
+    height: auto;
+}
+.compare-bar {
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    max-height: 100%;
+}
+
+.compare-mini-movies {
+    display: flex;
+    width: 70vw;
+    max-height: 100%;
+    color: goldenrod;
+    align-items: center;
+    justify-content: center;
+}
+
+.compare-mini-movies h2 {
+    padding: 0 5px;
+}
+
+
+.link-buttons {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.link-buttons a {
+    padding: 0 15vw; 
+}
+/*
+.search-box {
+    
+}
+
+input {
+   
+}
+*/
+.movie-small {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 20vw;
+    max-height: 20vh;
+    object-fit: contain;
+    color: aqua;
+    overflow: hidden;
+}
+
+.movie-small img {
+    object-fit: contain;
+    max-width: 90%;
+}
+
+.movie-small h2 {
+    display: none;
+    color: white;
+    margin: 0;
+    font-size: 0.3rem;
+}

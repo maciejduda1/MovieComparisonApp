@@ -1,0 +1,18 @@
+.footer {
+    background: black;
+    color: #01d277;
+    max-height: 10vh;
+    display: inline;
+    font-size: 0.6rem;
+}
+
+a {
+    padding-left: 5px;
+    text-decoration: none;
+    color: #01d277;
+}
+
+p:hover {
+    color: aliceblue;
+    transition-duration: 0.75s;
+}
