@@ -7,20 +7,21 @@
     background-color: black;
     color: #01d277;
     display: block;
-    max-height: 65vh;
+    height: 65vh;
 }
 
 .movies {
     width: 100vw;
-    height: 65vh;
+    height: 100%;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
 .single-movie {
-    max-height: 100%;
+    height: 100%;
     display: inline-flex;
+    justify-content: space-evenly;
     flex-direction: column;
     max-width: 85vw;
     padding-right: 10px;
@@ -34,12 +35,18 @@
 }
 
 .movie-title {
-    font-size: 0.75em;
+    max-width: 100%; 
 }
-
-
+.movie-title > h2 {
+    font-size: 0.6em;
+    overflow-wrap: break-word;
+    margin: 5px 0;
+    padding: 0;
+}
+/*
 @media (max-height: 560px) {
     .poster-container img {
         max-height: 45vh;
     }
 }
+*/

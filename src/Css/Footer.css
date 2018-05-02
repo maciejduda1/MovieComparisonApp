@@ -1,11 +1,13 @@
 .footer {
     background: black;
     color: #01d277;
-    max-height: 10vh;
+    height: 10vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 1.4vmax;
+    font-size: 2.2vw;
+    margin-top: 5px;
 }
 
 a {
@@ -15,6 +17,7 @@ a {
 }
 
 .footer p {
+    margin: 0;
     padding-right: 10px;
 }
 
@@ -22,3 +25,11 @@ p:hover {
     color: aliceblue;
     transition-duration: 0.75s;
 }
+/*
+@media (max-width: 319px) {
+    .footer {
+        max-height: 100%;
+        font-size: 2.5vw;
+    }
+}
+*/

@@ -6,6 +6,7 @@
 .movie-to-compare, .movie-compare-section {
     max-width: 100%;
     background-size: cover;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
 
