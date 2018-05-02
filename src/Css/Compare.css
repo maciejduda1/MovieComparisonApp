@@ -1,6 +1,6 @@
 .compare {
+    background-color: black;
     width: 100vw;
-    color: greenyellow;
 }
 
 .movie-to-compare, .movie-compare-section {
@@ -12,4 +12,9 @@
 
 .movie-to-compare img {
     max-width: 100%;
+}
+
+.movie-to-compare p:last-child {
+    margin: 0;
+    padding-bottom: 5px
 }
