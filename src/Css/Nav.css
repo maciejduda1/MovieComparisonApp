@@ -2,19 +2,23 @@
     display: flex;
     width: 100vw;
     height: 25vh;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .moviedb-image {
     align-self: center;
+   
+}
+
+.moviedb-image > img {
     max-width: 25vw;
     max-height: 25vh;
-}
-.moviedb-image > img {
     max-width: 100%;
+    object-fit: contain;
 }
+
 .compare-bar {
     display: flex;
     flex-direction: column;
@@ -34,7 +38,7 @@
 
 .link-buttons { 
     display: flex;
-    width: 100%;
+/*    width: 100%;*/
     justify-content: center;
 }
 .link-buttons a {
@@ -65,16 +69,44 @@
 }
 
 /*
-@media (max-height: 580px) and (min-width: 290px) {
+@media only screen and (max-height: 580px) and (orientation: landscape) {
     .search-bar {
-        align-content: space-around;
-        flex-wrap: nowrap;
+        justify-content: space-around;
     }
     .compare-bar {
         flex-direction: row;
+        align-items: center;
+    }
+}
+*/
+
+@media only screen and (min-width: 500px) {
+    .compare-bar {
+        padding-left: 5%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .compare-mini-movies {
+        height: 25vh;
+        flex: 2;
+    }
+    .movie-small img {
+        max-height: 20vh;
+    }
+    .search-bar {
+        justify-content: space-evenly;
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .search-bar {
+        width: 100%;
+    }
+}
+
+/*
 @media (max-width: 289px) {
     .search-bar {
         flex-direction: column;

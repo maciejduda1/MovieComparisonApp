@@ -43,6 +43,37 @@
     margin: 5px 0;
     padding: 0;
 }
+
+@media only screen and (min-width: 1024px) {
+    .movies {
+        display:flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        justify-content: center;
+        white-space: normal;
+        overflow-x: auto;
+        overflow-y: auto;
+        
+    }
+
+    ::-webkit-scrollbar { 
+            display: block; 
+        }
+
+    .single-movie {
+        display: flex;
+        height: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .movies {
+        width: 100%;
+    }
+}
+
+
+
 /*
 @media (max-height: 560px) {
     .poster-container img {

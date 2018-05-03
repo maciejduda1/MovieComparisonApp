@@ -16,7 +16,6 @@ const Nav = (props) => {
                 <div className="compare-bar">
                     <Search />
                     <div className="link-buttons">
-                        <Link to='/results'>All Results</Link>
                         <Link to={'/compare'} onClick={props.compare}>Compare</Link>
                     </div>
                     <div className='compare-mini-movies'>
@@ -38,7 +37,6 @@ const Nav = (props) => {
                 <Search />
                 <div className="link-buttons">
                     <Link to={'/compare'} onClick={ (e)=> e.preventDefault() }>Compare</Link>
-                    <Link to='/results' onClick={(e)=> e.preventDefault() }>All Results</Link>
                 </div>
                 <div className='compare-mini-movies'>
                     <MovieLeft />
@@ -50,4 +48,9 @@ const Nav = (props) => {
         </div>
     );
 }
+
+/*
+<Link to='/results' onClick={(e)=> e.preventDefault() }>All Results</Link>
+<Link to='/results'>All Results</Link>
+*/
 export default Nav;

@@ -1,7 +1,6 @@
 .footer {
     background: black;
-    color: #01d277;
-    height: 10vh;
+    max-height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -13,7 +12,6 @@
 a {
     padding-left: 5px;
     text-decoration: none;
-    color: #01d277;
 }
 
 .footer p {
@@ -25,11 +23,25 @@ p:hover {
     color: aliceblue;
     transition-duration: 0.75s;
 }
+
+@media only screen and (min-width: 500px) {
+    .footer {
+        height: 100%;
+        font-size: 1.5vw;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .footer {
+        width: 100%;
+        font-size: 1vw;
+    }
+}
+
 /*
 @media (max-width: 319px) {
-    .footer {
-        max-height: 100%;
-        font-size: 2.5vw;
-    }
+    
 }
 */

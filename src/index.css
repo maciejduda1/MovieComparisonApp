@@ -10,3 +10,10 @@ body {
   min-height: 100vh;
   max-width: 100vw;
 }
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 10%;
+    background-color: black;
+  }
+}

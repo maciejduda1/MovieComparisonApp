@@ -7,7 +7,7 @@ const Main = (props) => {
     if (!props.loading && !props.gotResults && props.resultPages > 0) {
         return (
             <div className="loading-results">
-                <img  src={noResultLogo} alt=""/>
+                <img  src={noResultLogo} alt="no results logo"/>
             </div>
         );
     }
