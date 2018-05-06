@@ -1,5 +1,6 @@
 import React from 'react';
 import Movie from '../Containers/MovieContainer';
+import Filter from './Filter';
 import '../Css/Main.css';
 import noResultLogo from '../images/board-cinema-cinematography-274937.jpg';
 
@@ -15,6 +16,7 @@ const Main = (props) => {
     if (!props.loading && props.gotResults) {
         return (
             <div className="loading-results">
+                <Filter pages={props.resultPages} searchDatabase={props.searchDatabase} searchedTitle={props.searchedTitle} />
                 <Movie/>
             </div>
         );

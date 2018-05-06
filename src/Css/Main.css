@@ -12,7 +12,7 @@
 
 .movies {
     width: 100vw;
-    height: 100%;
+    height: 90%;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
@@ -30,7 +30,7 @@
 
 .poster-container img {
     max-width: 90vw;
-    max-height: 50vh;   
+    max-height: 40vh;   
   
 }
 
@@ -42,6 +42,23 @@
     overflow-wrap: break-word;
     margin: 5px 0;
     padding: 0;
+}
+
+.buttons-section {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 10%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.results-pages-button {
+    margin-right: 2vw; 
+}
+
+.results-pages-button:focus {
 }
 
 @media only screen and (min-width: 1024px) {
@@ -70,14 +87,8 @@
     .movies {
         width: 100%;
     }
-}
-
-
-
-/*
-@media (max-height: 560px) {
-    .poster-container img {
-        max-height: 45vh;
+    .buttons-section {
+        margin-left: 0;
+        margin-right: 0;  
     }
 }
-*/
