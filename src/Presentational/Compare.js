@@ -33,7 +33,7 @@ const Compare = (props) => {
                  <div className='movie-to-compare'  style={backgroundStyleLeft}>
                     <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieLeft.poster_path}`} alt='movie poster'></img>
                     <h1>"{props.movieLeft.title}"</h1>
-                    <i>{props.movieRight.tagline}</i>
+                    <i>{props.movieLeft.tagline}</i>
                     <h2>Release date:{props.movieLeft.release_date}</h2>
                     <p>Revenue: ${props.movieLeft.revenue}</p>
                     <p>Budget: ${props.movieLeft.budget}</p>
@@ -55,7 +55,7 @@ const Compare = (props) => {
             <div className='movie-to-compare'  style={backgroundStyleLeft}>
                 <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${props.movieLeft.poster_path}`} alt='movie poster'></img>
                 <h1>"{props.movieLeft.title}"</h1>
-                <i>{props.movieRight.tagline}</i>
+                <i>"{props.movieLeft.tagline}"</i>
                 <h2>Release date:{props.movieLeft.release_date}</h2>
                 <p>Revenue: ${props.movieLeft.revenue}</p>
                 <p>Budget: ${props.movieLeft.budget}</p>
