@@ -30,6 +30,7 @@ function appReducer (state = initialState, action) {
             return Object.assign({}, state, { loading: false, gotResults: false });
 
         case GET_RESPONSE_DONE:
+            
             console.log('resultPages: ', action.data.total_pages );
             return Object.assign({}, state, { searchResults: action.data.results, loading: false, gotResults: true, resultPages: action.data.total_pages, searchedTitle: action.title });
 
