@@ -6,4 +6,8 @@ const mapDispatchToProps = dispatch => ({
     searchDatabase: (event) => dispatch(searchDatabase(event)),
 });
 
-export default connect(null, mapDispatchToProps)(Search);
+const mapStateToProps = state => ({
+    loading: state.loading,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
