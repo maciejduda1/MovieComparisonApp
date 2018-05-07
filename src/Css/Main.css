@@ -58,9 +58,6 @@
     margin-right: 2vw; 
 }
 
-.results-pages-button:focus {
-}
-
 @media only screen and (min-width: 1024px) {
     .movies {
         display:flex;
@@ -74,8 +71,8 @@
     }
 
     ::-webkit-scrollbar { 
-            display: block; 
-        }
+        display: block; 
+    }
 
     .single-movie {
         display: flex;
@@ -91,4 +88,5 @@
         margin-left: 0;
         margin-right: 0;  
     }
+
 }

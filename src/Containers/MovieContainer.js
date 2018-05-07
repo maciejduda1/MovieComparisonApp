@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Movie from '../Presentational/Movie';
-import { searchDatabase, searchDetailsLeft, searchDetailsRight } from '../actions.js';
+import { searchDetailsLeft, searchDetailsRight } from '../actions.js';
 
 const mapStateToProps = (state) => ({
     movies: state.searchResults,

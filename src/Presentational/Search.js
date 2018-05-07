@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import Movie from './Movie.js'
+import React from 'react';
 
 const Search = (props) => (
     <div className="search-box">

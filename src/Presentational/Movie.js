@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Movie = (props) => (
     <div className='movies'>
@@ -23,5 +22,5 @@ const Movie = (props) => (
         
     </div>   
 )
-// <Link to='/results'>More results...</Link>
+
 export default Movie;

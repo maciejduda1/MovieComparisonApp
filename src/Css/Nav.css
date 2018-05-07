@@ -22,6 +22,9 @@
 .compare-bar {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    
 }
 
 .compare-mini-movies {
@@ -35,23 +38,22 @@
     padding: 0 5px;
 }
 
-
-.link-buttons { 
-    display: flex;
-/*    width: 100%;*/
-    justify-content: center;
+.compare-mini-movies a {
+    text-decoration: none;
+    color: white;
 }
-.link-buttons a {
-    padding: 0 15px; 
+.compare-mini-movies a:hover {
+    color: gold;
 }
 
-
+.compare-mini-movies a h2 {
+    margin: 0;
+    padding: 0;
+}
 .movie-small {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    max-width: 20vw;
-    max-height: 20vh;
     object-fit: contain;
     color: rgb(20, 128, 56);
     overflow: hidden;
@@ -60,25 +62,6 @@
 .movie-small img {
     max-height: 10vh;
 }
-
-.movie-small h2 {
-    display: none;
-    color: white;
-    margin: 0;
-    font-size: 1vh;
-}
-
-/*
-@media only screen and (max-height: 580px) and (orientation: landscape) {
-    .search-bar {
-        justify-content: space-around;
-    }
-    .compare-bar {
-        flex-direction: row;
-        align-items: center;
-    }
-}
-*/
 
 @media only screen and (min-width: 500px) {
     .compare-bar {
@@ -100,20 +83,17 @@
     }
 }
 
+@media screen and (min-width: 580px){
+    .compare-mini-movies a {
+        margin: 0 5%;
+        padding: 0;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .search-bar {
         width: 100%;
     }
-}
 
-/*
-@media (max-width: 289px) {
-    .search-bar {
-        flex-direction: column;
-        height: auto;
-    }
-    .compare-bar {
-        flex-direction: column;
-    }
+    
 }
-*/
