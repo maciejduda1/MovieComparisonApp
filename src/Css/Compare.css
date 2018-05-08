@@ -1,8 +1,17 @@
 .compare {
     background-color: black;
     width: 100%;
+    min-height: 65vh;
+    text-align: center;
 }
-
+.compare h1 {
+    margin: 0;
+    
+}
+.compare img {
+    max-width: 100vw;
+    max-height: 55vh;
+}
 .movie-to-compare, .movie-compare-section {
     max-width: 100%;
     background-size: cover;

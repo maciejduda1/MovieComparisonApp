@@ -1,5 +1,5 @@
 .main-page {
-    color: rgb(94, 129, 40);
+    text-shadow: -1px 1px #01d277, 1px 1px 1px grey;
     height: 65vh;
 }
 
@@ -8,6 +8,7 @@
     color: #01d277;
     display: block;
     height: 65vh;
+   /* box-shadow: inset 0 0 20px #01d277;*/
 }
 
 .movies {
