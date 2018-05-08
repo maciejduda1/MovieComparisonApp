@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Css/Compare.css';
+import noResultLogo from '../images/board-cinema-cinematography-274937.jpg';
 
 const Compare = (props) => {
     let backgroundMovieImageRight = 'https://image.tmdb.org/t/p/original' + props.movieRight.backdrop_path,
@@ -47,6 +48,7 @@ const Compare = (props) => {
         return (
             <div className='compare'>
                 <h1>Find some movies to compare first!</h1>
+                <img src={noResultLogo} alt='no movie to compare poster'/>
             </div>
         );
     } 

@@ -72,7 +72,8 @@ function searchDatabase(event, page) {
     return dispatch => {
         dispatch(searchDatabaseRequested());
         console.log('czego szukam',event);
-        const movieTitle = event;
+        const movieTitle = event
+        console.log('event trim: ',event.trim());
         const resultsPage = page || 1;
         console.log('resultsPage', resultsPage);
         const api_key = 'e7cbc37b2431954da6cfc6053cd4e9f8';

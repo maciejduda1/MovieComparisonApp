@@ -13,7 +13,7 @@ const Search = (props) => {
                 ref={(input) => this.input = input}     
                 placeholder = 'Movie Title'
             /> 
-            <input type='submit' value='Submit' onClick={(event) => props.searchDatabase(this.input.value)}/>
+            <input type='submit' value='Submit' onClick={(event) => { if (this.input.value.trim().length > 0){ props.searchDatabase(this.input.value.trim()) } }}/>
         </form>
     </div>
     );
