@@ -3,6 +3,7 @@ import Movie from '../Containers/MovieContainer';
 import Filter from './Filter';
 import '../Css/Main.css';
 import noResultLogo from '../images/board-cinema-cinematography-274937.jpg';
+import LoadingScreenLogo from '../images/pensive black and white GIF by Tobias Rothe-source.gif'
 
 const Main = (props) => {
     if (!props.loading && !props.gotResults && props.resultPages > 0) {
@@ -21,9 +22,12 @@ const Main = (props) => {
             </div>
         );
     }    
-    if (props.loading && !props.gotResults) {
+    if (props.loading) {
         return (
-            <img className="loading-results" src="../../public/pensive black and white GIF by Tobias Rothe-source.gif"  alt="" />
+            <div className="loading-results">
+                <img  src={LoadingScreenLogo} alt="" />
+            </div>
+            
         );
     }
     

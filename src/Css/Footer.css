@@ -15,6 +15,7 @@ footer p a {
 }
 
 .footer p {
+    color: rgb(255, 255, 255);
     margin: auto;
     padding-right: 10px;
 }

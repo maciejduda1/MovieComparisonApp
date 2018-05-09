@@ -10,6 +10,10 @@
     height: 65vh;
    /* box-shadow: inset 0 0 20px #01d277;*/
 }
+.loading-results img {
+    max-width: 20vw;
+    margin: auto;
+}
 
 .movies {
     width: 100vw;
