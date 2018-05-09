@@ -6,7 +6,7 @@ const Filter = (props) => {
         items =[...items, i];
     }
     return (
-        <div className="buttons-section">
+        <div className="buttons-section">  
             {items.map( item => <button className='results-pages-button' onClick={() => props.searchDatabase(props.searchedTitle, item)} key={item}>page {item}</button> )}
         </div>      
     );
