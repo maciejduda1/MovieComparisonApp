@@ -2,7 +2,10 @@
     text-shadow: -1px 1px #01d277, 1px 1px 1px grey;
     height: 65vh;
 }
-
+.main-page h1 {
+    margin: 0 0 20px 0;
+    padding-top: 20px
+}
 .loading-results {
     background-color: black;
     color: #01d277;

@@ -11,7 +11,6 @@ const Movie = (props) => (
                     <div className='movie-title'>
                         <h2 >{movie.title}</h2>
                     </div>
-                    
                     <div className='buttons'>
                         <button onClick={() => props.addMovieLeft(movie)} >AddLeft</button>
                         <button onClick={() => props.addMovieRight(movie)}>AddRight</button>
