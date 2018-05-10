@@ -17,6 +17,7 @@
 }
 
 .movies {
+    margin-top: 15px;
     width: 100vw;
     height: 90%;
     white-space: nowrap;
@@ -26,18 +27,21 @@
 
 .single-movie {
     height: 100%;
-    display: inline-flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    max-width: 85vw;
+    display: inline-block;
+    max-width: 55vw;
     padding-right: 10px;
-   
+}
+
+.poster-container  {
+    max-width: 90vw;
+    height: 40vh;
+    border: 1px solid #01d277;   
 }
 
 .poster-container img {
-    max-width: 90vw;
-    max-height: 40vh;   
-  
+    max-width: 90vw;    
+    max-height: 40vh;
+    object-fit: contain;
 }
 
 .movie-title {
@@ -45,6 +49,7 @@
 }
 .movie-title > h2 {
     font-size: 0.6em;
+    word-wrap: break-word;
     overflow-wrap: break-word;
     margin: 5px 0;
     padding: 0;
@@ -54,6 +59,7 @@
     width: 80vw;
     display: inline-flex;
     align-content: center;
+    align-items: center;
     flex-wrap: nowrap;
     margin: 0 auto;
     height: 10%;
@@ -62,8 +68,23 @@
     white-space: nowrap;
 }
 
+.buttons-section h3 {
+    margin-right: 15px;
+}
+
+
+.results-pages-button:hover {
+    background-color: #003054;
+    color: white;
+    transition: 1s;
+}
+
 .results-pages-button {
-    margin-right: 2vw; 
+    margin-right: 2vw;
+    border-radius: 25px;
+    background-color: #01d277; 
+    border: 2px solid white;
+    filter: drop-shadow(-2px 2px 5px grey);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -83,6 +104,7 @@
 
     .single-movie {
         display: flex;
+        flex-direction: column;
         height: 90%;
     }
 }
