@@ -64,7 +64,7 @@ function searchDetailsRight(movie) {
         fetch(URL).then( (res) => res.json())
             .then( (data) => {
             dispatch(addMovieRight(data))
-        })
+            })
     }
 }
 

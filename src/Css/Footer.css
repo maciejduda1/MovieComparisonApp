@@ -1,12 +1,14 @@
 .footer {
+    padding-top: 1vmax;
     background: black;
     height: 10vh;
+    line-height: 3vmax;
     width: 100vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     font-size: 2vmax;
-    background-image: linear-gradient( black, #01d277);
+    background-image: linear-gradient( black, #2f3331);
 }
 
 footer p a {
@@ -35,6 +37,7 @@ p:hover {
 
 @media only screen and (min-width: 1024px) {
     .footer {
+        height: auto;
         width: 100%;
         font-size: 1vw;
     }

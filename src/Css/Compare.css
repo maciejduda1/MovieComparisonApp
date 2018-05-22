@@ -2,7 +2,7 @@
     background-color: black;
     width: 100%;
     min-height: 65vh;
-    text-align: center;
+    text-align: center; 
 }
 .compare h1 {
     margin: 0;
@@ -12,8 +12,22 @@
     max-width: 100vw;
     max-height: 35vh;
 }
+
+.compare-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.compare-img-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vh 0;
+}
+
 .movie-to-compare, .movie-compare-section {
-    max-width: 100%;
+    order: -1;
+    flex-basis: 100vw;
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -21,8 +35,8 @@
 
 .movie-compare-section {
     font-family: 'Skranji', cursive;
-    box-shadow: inset 5px 5px 15px #003054,
-                inset -5px -5px 15px #003054;
+    box-shadow: inset 5px 5px 15px #9cc9eb,
+                inset -5px -5px 15px #9cc9eb;
 }
 
 .movie-compare-section p:first-child {
@@ -54,5 +68,12 @@
 @media only screen and (min-width:768px) {
     .about-movie-section {
         max-width: 80%;
+    }
+    .compare-all {
+        flex-direction: row;
+    }
+    .movie-to-compare, .movie-compare-section {
+        order: 0;
+        flex-basis: 60vw;
     }
 }

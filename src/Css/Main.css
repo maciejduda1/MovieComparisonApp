@@ -94,15 +94,9 @@
     .movies {
         display:flex;
         flex-wrap: wrap;
-        width: 100vw;
+        width: 100%;
         justify-content: center;
-        white-space: normal;
-        overflow-x: auto;
-        overflow-y: auto;
-    }
-
-    ::-webkit-scrollbar { 
-        display: block; 
+        height: auto;
     }
 
     .single-movie {
@@ -110,15 +104,14 @@
         flex-direction: column;
         height: 90%;
     }
-}
 
-@media screen and (min-width: 1024px) {
-    .movies {
-        width: 100%;
-    }
     .buttons-section {
         margin-left: 0;
         margin-right: 0;  
     }
-
+    .main-page, .loading-results {
+        height: auto;
+        min-height: 70vh;
+    }
 }
+

@@ -12,14 +12,15 @@ const Movie = (props) => (
                         <h2 >{movie.title}</h2>
                     </div>
                     <div className='buttons'>
-                        <button onClick={() => props.addMovieLeft(movie)} >AddLeft</button>
-                        <button onClick={() => props.addMovieRight(movie)}>AddRight</button>
+                        <AddButton movieLeft={props.movieLeft} movie={movie} addMovieLeft={()=>props.addMovieLeft(movie)} addMovieRight={()=>props.addMovieRight(movie)}/>
                     </div> 
                 </div>
             );
-        })}
-        
+        })} 
     </div>   
 )
+
+const AddButton = (props) => (props.movieLeft.title == undefined) ?  <button onClick={() => props.addMovieLeft(props.movie)} >Select movie</button> : <button onClick={() => props.addMovieRight(props.movie)}>Compare with</button>
+
 
 export default Movie;
