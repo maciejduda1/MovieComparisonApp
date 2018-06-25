@@ -1,4 +1,5 @@
 import React from 'react';
+import noPoster from '../images/cinema-food-movie-theater.jpg';
 
 const Movie = (props) => (
     <div className='movies'>
@@ -6,7 +7,7 @@ const Movie = (props) => (
             return (
                 <div className='single-movie' key={movie.id}>
                     <div className='poster-container'>
-                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt=' no movie poster'></img>
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}` || noPoster} alt=''></img>
                     </div>
                     <div className='movie-title'>
                         <h2 >{movie.title}</h2>

@@ -1,4 +1,4 @@
-import { ADD_MOVIE_LEFT, ADD_MOVIE_RIGHT, GET_RESPONSE_DONE, GET_RESPONSE_FAILED, SEARCH_DATABASE_REQUESTED, COMPARE_MOVIES } from './actions.js';
+import { ADD_MOVIE_LEFT, ADD_MOVIE_RIGHT, GET_RESPONSE_DONE, GET_RESPONSE_FAILED, SEARCH_DATABASE_REQUESTED, COMPARE_MOVIES, RESET_STATE, CONTINUE_COMPARES } from './actions.js';
 
 const initialState = {
     movieLeft: {},
@@ -10,14 +10,14 @@ const initialState = {
     page: 1,
     resultPages: 0,
     searchedTitle: '',
-    didCompare: false,
+    didCompare: false, 
 };
 
 function appReducer (state = initialState, action) {
     switch (action.type) {
         case ADD_MOVIE_LEFT: 
             if (action.movie.backdrop_path !== state.movieRight.backdrop_path) {
-                return Object.assign({}, state, { movieLeft: action.movie });
+                return Object.assign({}, state, { movieLeft: action.movie, gotResults: false });
             }
             return Object.assign({}, state, {});
         case ADD_MOVIE_RIGHT:
@@ -36,6 +36,12 @@ function appReducer (state = initialState, action) {
 
         case SEARCH_DATABASE_REQUESTED:
             return Object.assign({}, state, { loading: true, didCompare: false });
+        
+        case RESET_STATE:
+            return state = initialState;
+
+        case CONTINUE_COMPARES:
+            return Object.assign({}, state, { movieRight: {}, didCompare: false, gotResults: false });
 
         case COMPARE_MOVIES:
             if (state.movieLeft.title !== undefined && state.movieRight.title !== undefined && state.movieLeft.release_date != state.movieRight.release_date){

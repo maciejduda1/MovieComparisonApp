@@ -12,6 +12,7 @@ const mapStateToProps = (state) => ({
     movieLeft: state.movieLeft,
     movieRight: state.movieRight,
     didCompare: state.didCompare,
+    
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,14 +1,11 @@
 .footer {
+    display: block;
     padding-top: 1vmax;
     background: black;
-    height: 10vh;
-    line-height: 3vmax;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-size: 2vmax;
     background-image: linear-gradient( black, #2f3331);
+    margin-top: auto;
+    font-size: 0.8em;
 }
 
 footer p a {
@@ -19,7 +16,7 @@ footer p a {
 .footer p {
     color: rgb(255, 255, 255);
     margin: auto;
-    padding-right: 10px;
+    padding: 5px 10px 5px 0;
 }
 
 p:hover {
@@ -29,8 +26,6 @@ p:hover {
 
 @media only screen and (min-width: 500px) {
     .footer {
-        font-size: 1.5vw;
-        align-items: center;
         padding: 0;
     }
 }
@@ -39,6 +34,5 @@ p:hover {
     .footer {
         height: auto;
         width: 100%;
-        font-size: 1vw;
     }
 }

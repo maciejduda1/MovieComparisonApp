@@ -9,7 +9,7 @@ const Search = (props) => {
     <div className="search-box">
         
         <form onSubmit={e => e.preventDefault()}>
-            <label>Find movies to compare 
+            <label>Find movies to compare:    
                 <input 
                     type='text'
                     ref={(input) => this.input = input}     

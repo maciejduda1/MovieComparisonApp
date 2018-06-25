@@ -1,7 +1,7 @@
 .compare {
     background-color: black;
     width: 100%;
-    min-height: 65vh;
+  /*  min-height: 65vh; */
     text-align: center; 
 }
 .compare h1 {
@@ -23,6 +23,17 @@
     flex-direction: column;
     align-items: center;
     margin: 2vh 0;
+}
+
+.movie-to-compare {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 
 .movie-to-compare, .movie-compare-section {
@@ -50,14 +61,11 @@
 }
 
 .about-movie-section {
+    width: 80%;
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
-    margin: 0 auto;
-    background-color: rgb(0, 0, 0,0.9);   
-}
-
-.movie-to-compare img {
-    max-width: 100%;
+    margin: 10% auto;
+    background-color: rgba(0, 0, 0, 0.9);   
 }
 
 .movie-to-compare p:last-child {
@@ -65,7 +73,7 @@
     padding-bottom: 5px
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1200px) {
     .about-movie-section {
         max-width: 80%;
     }
@@ -74,6 +82,6 @@
     }
     .movie-to-compare, .movie-compare-section {
         order: 0;
-        flex-basis: 60vw;
+        flex-basis: 59vw;
     }
 }
