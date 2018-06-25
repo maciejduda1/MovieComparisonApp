@@ -4,6 +4,21 @@ const SEARCH_DATABASE_REQUESTED = 'SEARCH_DATABASE_REQUESTED';
 const GET_RESPONSE_DONE ='GET_RESPONSE_DONE';
 const GET_RESPONSE_FAILED = 'GET_RESPONSE_FAILED';
 const COMPARE_MOVIES = 'COMPARE_MOVIES';
+const RESET_STATE = 'RESET_STATE';
+const CONTINUE_COMPARES = 'CONTINUE_COMPARES';
+
+function continueCompares() {
+    return {
+        type: CONTINUE_COMPARES,
+    }
+}
+
+
+function resetState() {
+    return {
+        type: RESET_STATE
+    }
+}
 
 function searchDatabaseRequested() {
    return {
@@ -64,7 +79,7 @@ function searchDetailsRight(movie) {
         fetch(URL).then( (res) => res.json())
             .then( (data) => {
             dispatch(addMovieRight(data))
-        })
+            })
     }
 }
 
@@ -97,4 +112,4 @@ function searchDatabase(event, page) {
     }
 }
 
-export { ADD_MOVIE_LEFT, ADD_MOVIE_RIGHT, GET_RESPONSE_DONE, GET_RESPONSE_FAILED, SEARCH_DATABASE_REQUESTED, COMPARE_MOVIES, addMovieLeft, addMovieRight, searchDatabase, searchDetailsLeft, searchDetailsRight, searchDatabaseRequested, getResponseDone, getResponseFailed, compareMovies };
+export { ADD_MOVIE_LEFT, ADD_MOVIE_RIGHT, GET_RESPONSE_DONE, GET_RESPONSE_FAILED, SEARCH_DATABASE_REQUESTED, COMPARE_MOVIES, RESET_STATE, CONTINUE_COMPARES, continueCompares, resetState, addMovieLeft, addMovieRight, searchDatabase, searchDetailsLeft, searchDetailsRight, searchDatabaseRequested, getResponseDone, getResponseFailed, compareMovies };

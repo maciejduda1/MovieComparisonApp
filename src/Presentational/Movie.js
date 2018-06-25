@@ -1,4 +1,5 @@
 import React from 'react';
+import noPoster from '../images/cinema-food-movie-theater.jpg';
 
 const Movie = (props) => (
     <div className='movies'>
@@ -6,20 +7,21 @@ const Movie = (props) => (
             return (
                 <div className='single-movie' key={movie.id}>
                     <div className='poster-container'>
-                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt=' no movie poster'></img>
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}` || noPoster} alt=''></img>
                     </div>
                     <div className='movie-title'>
                         <h2 >{movie.title}</h2>
                     </div>
                     <div className='buttons'>
-                        <button onClick={() => props.addMovieLeft(movie)} >AddLeft</button>
-                        <button onClick={() => props.addMovieRight(movie)}>AddRight</button>
+                        <AddButton movieLeft={props.movieLeft} movie={movie} addMovieLeft={()=>props.addMovieLeft(movie)} addMovieRight={()=>props.addMovieRight(movie)}/>
                     </div> 
                 </div>
             );
-        })}
-        
+        })} 
     </div>   
 )
+
+const AddButton = (props) => (props.movieLeft.title == undefined) ?  <button onClick={() => props.addMovieLeft(props.movie)} >Select movie</button> : <button onClick={() => props.addMovieRight(props.movie)}>Compare with</button>
+
 
 export default Movie;

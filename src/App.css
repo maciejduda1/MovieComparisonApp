@@ -1,9 +1,16 @@
 .App {
-  color: #003054;
+  display: flex;
+  flex-direction: column;
+  color: #c1d1dd;
   text-align: center;
   background-color: black;
-  height: 100vh;
+  height: 100%;
   max-width: 100vw;
+  background-color: black;
+/*  background-image: url('./images/cinema-dark-display-8158.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;*/
 }
 
 

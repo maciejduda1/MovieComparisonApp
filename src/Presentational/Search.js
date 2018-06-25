@@ -7,13 +7,17 @@ const Search = (props) => {
     }
     return (
     <div className="search-box">
+        
         <form onSubmit={e => e.preventDefault()}>
-            <input 
-                type='text'
-                ref={(input) => this.input = input}     
-                placeholder = 'Movie Title'
-            /> 
-            <input type='submit' value='Submit' onClick={(event) => { if (this.input.value.trim().length > 0){ props.searchDatabase(this.input.value.trim()) } }}/>
+            <label>Find movies to compare:    
+                <input 
+                    type='text'
+                    ref={(input) => this.input = input}     
+                    placeholder = 'Movie Title'
+                    
+                /> 
+            </label>
+            <input type='submit' value='Search database' onClick={(event) => { if (this.input.value.trim().length > 0){ props.searchDatabase(this.input.value.trim()) } }}/>
         </form>
     </div>
     );

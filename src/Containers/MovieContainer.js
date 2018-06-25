@@ -5,6 +5,7 @@ import { searchDetailsLeft, searchDetailsRight } from '../actions.js';
 const mapStateToProps = (state) => ({
     movies: state.searchResults,
     page: state.page,
+    movieLeft: state.movieLeft,
 });
 
 const mapDispatchToProps = dispatch => ({
