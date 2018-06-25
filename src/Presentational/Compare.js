@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../Css/Compare.css';
-import noResultLogo from '../images/board-cinema-cinematography-274937.jpg';
 import LoadingScreenLogo from '../images/pensive black and white GIF by Tobias Rothe-source.gif';
 
 class Compare extends Component {
@@ -99,53 +98,4 @@ class Compare extends Component {
         );
     }
 } 
-/*
-<img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${this.props.movieRight.poster_path}`} alt='movie poster'></img>
-<img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${this.props.movieLeft.poster_path}`} alt='movie poster'></img>
-
- if (this.props.movieLeft.title == undefined  && this.props.movieRight.title !== undefined ) {
-                return (
-                    <div className='compare'>
-                        <div className='movie-to-compare' style={backgroundStyleRight}>
-                            <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${this.props.movieRight.poster_path}`} alt='movie poster'></img>
-                            <div className='about-movie-section'>
-                                <h1>{this.props.movieRight.title}</h1>
-                                <i>"{this.props.movieRight.tagline}"</i>
-                                <h2>Release date:{this.props.movieRight.release_date}</h2>
-                                <p>Revenue: ${this.props.movieRight.revenue}</p>
-                                <p>Budget: ${this.props.movieRight.budget}</p>
-                                <p>Popularity: {this.props.movieRight.popularity}</p>
-                                <p>Average Vote: {this.props.movieRight.vote_average}</p>
-                                <p>Overview: <span>{this.props.movieRight.overview}</span></p>
-                            </div>
-                        </div>
-                    </div>
-                );
-            } else if (this.props.movieRight.title == undefined && this.props.movieLeft.title !== undefined) {
-                return (
-                    <div className='compare'>
-                         <div className='movie-to-compare'  style={backgroundStyleLeft}>
-                            <img className='movie-poster-compare' src={`https://image.tmdb.org/t/p/w500${this.props.movieLeft.poster_path}`} alt='movie poster'></img>
-                            <div className='about-movie-section'>
-                                <h1>"{this.props.movieLeft.title}"</h1>
-                                <i>{this.props.movieLeft.tagline}</i>
-                                <h2>Release date:{this.props.movieLeft.release_date}</h2>
-                                <p>Revenue: ${this.props.movieLeft.revenue}</p>
-                                <p>Budget: ${this.props.movieLeft.budget}</p>
-                                <p>Popularity: {this.props.movieLeft.popularity}</p>
-                                <p>Average Vote: {this.props.movieLeft.vote_average}</p>
-                                <p>Overview: <span>{this.props.movieLeft.overview}</span></p>
-                            </div>
-                        </div>
-                    </div>
-                );
-            } else if (this.props.movieLeft.title == undefined  && this.props.movieRight.title == undefined){
-                return (
-                    <div className='compare'>
-                        <h1>Find some movies to compare first!</h1>
-                        <img src={noResultLogo} alt='no movie to compare poster'/>
-                    </div>
-                );
-            } 
-*/
 export default Compare;

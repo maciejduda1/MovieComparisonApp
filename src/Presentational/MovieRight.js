@@ -1,5 +1,4 @@
 import React from 'react';
-import placeholdMovie from '../images/cinema-dark-display-8158.jpg'
 
 const MovieRight = (props) => (
     <div className='movie-small'>
