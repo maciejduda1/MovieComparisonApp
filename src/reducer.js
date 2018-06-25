@@ -21,7 +21,6 @@ function appReducer (state = initialState, action) {
             }
             return Object.assign({}, state, {});
         case ADD_MOVIE_RIGHT:
-        //    console.log('porównanie: ', state.movieLeft, 'P: ', state.movieRight,' ad: ', action.movie);
             if (action.movie.backdrop_path !== state.movieLeft.backdrop_path) {
                 return Object.assign({}, state, { movieRight: action.movie, didCompare: true });
             }
@@ -55,7 +54,7 @@ function appReducer (state = initialState, action) {
                         return { value: 0, winner: 'noone' };
                     }
                 });
-                console.log(Winners);
+                
                 return Object.assign({}, state, { movieCompare: Winners });
             };
 

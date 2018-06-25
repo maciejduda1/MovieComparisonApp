@@ -86,11 +86,8 @@ function searchDetailsRight(movie) {
 function searchDatabase(event, page) {
     return dispatch => {
         dispatch(searchDatabaseRequested());
-        console.log('czego szukam',event);
         const movieTitle = event
-        console.log('event trim: ',event.trim());
         const resultsPage = page || 1;
-        console.log('resultsPage', resultsPage);
         const api_key = 'e7cbc37b2431954da6cfc6053cd4e9f8';
         const URL = 'https://api.themoviedb.org/3/search/movie?include_adult=false&api_key=' + api_key + '&query=' + movieTitle + '&page=' + resultsPage;
         fetch(URL)
